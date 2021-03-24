@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+
+import { useDebugValue } from 'react';
 import './App.css';
+import Value from './Context';
+import { Teacher } from './Teacher';
 
 function App() {
   return (
+     <Value.Provider value={["degi pulao", 'achar gosht', 'karhai']}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Teacher  name={'Anaya'} nick={'merab'} kick={'Aliya'} Kill={['Green' , 'red', 'Blue']} />
+
+    
     </div>
+    </Value.Provider>
   );
 }
 
